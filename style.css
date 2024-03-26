@@ -194,6 +194,10 @@ body {
     width: 110px;
 }
 
+.info div{
+    word-break: break-all;
+}
+
 .songlist {
     display: flex;
     flex-wrap: wrap;
@@ -251,6 +255,17 @@ body {
 
 .close {
     display: none;
+}
+
+.volume{
+    cursor: pointer;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    gap: 10px;
+}
+#rang{
+    cursor: pointer;
 }
 
 

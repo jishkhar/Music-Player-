@@ -131,6 +131,12 @@ async function main() {
         }
     })
 
+
+    //add event listener to volume range bar
+    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e)=>{
+        currentsong.volume = parseInt(e.target.value)/100
+    })
+
 }
 
 main();
