@@ -214,6 +214,7 @@ body{
     background-color: aliceblue;
     margin-bottom: 25px;
     border-radius: 10px;
+    cursor: pointer;
     /* position: relative; */
 }
 
@@ -226,6 +227,7 @@ body{
     top: 12px;
     left: 1%;
     transition: left 0.5s;
+    cursor: pointer;
 }
 
 .oneline{
@@ -233,3 +235,5 @@ body{
     justify-content: space-between;
     color: whitesmoke;
 }
+
+

@@ -42,17 +42,17 @@ const playMusic = (track) =>{
     currentsong.play();
     play.src = "pause.svg"
     document.querySelector(".songinfo").innerHTML = track
-    document.querySelector(".songtime").innerHTML = "00:00 / 00:00"
 }
 
 async function main() {
-
+    
     
     //get the song list
     let songs = await getSongs();
-    console.log(songs);
+    // console.log(songs);
     currentsong.src = "/songs/" + songs[0]
     document.querySelector(".songinfo").innerHTML = songs[0].replaceAll("%20", " ")
+    document.querySelector(".songtime").innerHTML = `00:00/00:00`
 
     //show songs in playlist
     let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0]
@@ -89,8 +89,16 @@ async function main() {
 
     //liesten for time update event
     currentsong.addEventListener("timeupdate", ()=>{
-        console.log(currentsong.currentTime, currentsong.duration);
+        // console.log(currentsong.currentTime, currentsong.duration);
         document.querySelector(".songtime").innerHTML = `${secondsToMinutesSeconds(currentsong.currentTime)}/${secondsToMinutesSeconds(currentsong.duration)}`
+
+        document.querySelector(".circle").style.left = (currentsong.currentTime/currentsong.duration)*100 + "%";
+    })
+
+    //add event listener to seek bar
+    document.querySelector(".seekbar").addEventListener("click", (e)=>{
+        document.querySelector(".circle").style.left = (e.offsetX/e.target.getBoundingClientRect().width)*100 + "%";
+        currentsong.currentTime = currentsong.duration * (e.offsetX/e.target.getBoundingClientRect().width);
     })
 }
 
