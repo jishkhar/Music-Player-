@@ -29,13 +29,16 @@
 
 .l-1{
     font-size: 22px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .s-2{
   width: 15px;
 }
 
+.cur{
+  cursor: pointer;
+}
 
 
 
@@ -49,6 +52,7 @@
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #444;
+    border-radius: 20px;
   }
   
   /* Handle on hover */
@@ -59,6 +63,7 @@
   /* Track */
   ::-webkit-scrollbar-track {
     background: #333;
+    border-radius: 20px;
   }
   
   /* Handle */
