@@ -3,6 +3,7 @@
 document.title = "Music Player"
 
 let currentsong = new Audio();
+let songs;
 
 
 function secondsToMinutesSeconds(seconds) {
@@ -41,14 +42,14 @@ const playMusic = (track) =>{
     currentsong.src = "/songs/" + track
     currentsong.play();
     play.src = "pause.svg"
-    document.querySelector(".songinfo").innerHTML = track
+    document.querySelector(".songinfo").innerHTML = track.replaceAll("%20", " ")
 }
 
 async function main() {
     
     
     //get the song list
-    let songs = await getSongs();
+    songs = await getSongs();
     // console.log(songs);
     currentsong.src = "/songs/" + songs[0]
     document.querySelector(".songinfo").innerHTML = songs[0].replaceAll("%20", " ")
@@ -112,6 +113,22 @@ async function main() {
 
     document.querySelector(".close").addEventListener("click", ()=>{
         document.querySelector(".left").style.left = "-120%";
+    })
+
+    //add an event listener to previous and next
+    previous.addEventListener("click", ()=>{
+        let index = songs.indexOf(currentsong.src.split("/").splice(-1) [0])
+        if(index-1 >= 0){
+            playMusic(songs[index-1])
+        }
+    })
+
+
+    next.addEventListener("click", ()=>{
+        let index = songs.indexOf(currentsong.src.split("/").splice(-1) [0])
+        if(index+1 >= length){
+            playMusic(songs[index+1])
+        }
     })
 
 }

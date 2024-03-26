@@ -176,9 +176,13 @@ body {
     align-items: center;
 }
 
+.songinfo{
+    width: 250px;
+}
+
 .playbar {
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     background-color: #313131;
     width: 68vw;
     padding: 15px;
