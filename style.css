@@ -170,7 +170,7 @@ body{
 }
 
 .playbar{
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     background-color: #313131;
     width: 70vw;
@@ -207,4 +207,29 @@ body{
 }
 .info{
     padding-right: 150px;
+}
+
+.seekbar{
+    height: 5px;
+    background-color: aliceblue;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    /* position: relative; */
+}
+
+.circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 50px;
+    background-color: #c2b2b2;
+    position: absolute;
+    top: 12px;
+    left: 1%;
+    transition: left 0.5s;
+}
+
+.oneline{
+    display: flex;
+    justify-content: space-between;
+    color: whitesmoke;
 }
