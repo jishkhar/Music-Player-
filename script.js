@@ -100,6 +100,20 @@ async function main() {
         document.querySelector(".circle").style.left = (e.offsetX/e.target.getBoundingClientRect().width)*100 + "%";
         currentsong.currentTime = currentsong.duration * (e.offsetX/e.target.getBoundingClientRect().width);
     })
+
+    //add an event listener to hamburger
+
+    document.querySelector(".hamburger").addEventListener("click", ()=>{
+        document.querySelector(".left").style.left = "0"
+        document.querySelector(".left").style.backgroundColor = "#black"
+    })
+
+    //add event listener to close
+
+    document.querySelector(".close").addEventListener("click", ()=>{
+        document.querySelector(".left").style.left = "-120%";
+    })
+
 }
 
 main();
