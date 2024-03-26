@@ -85,10 +85,24 @@ body{
 }
 
 .spotifyPlaylist .card{
-    width: 250px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #252525;
+    margin: 20px 10px;
+}
+
+.card > *{
+    padding-top: 5px;
 }
 
 .card img{
+    padding-top: 5px;
     width: 100%;
     object-fit: contain;
+}
+
+.cardContainer{
+    display: flex;
+    
 }
