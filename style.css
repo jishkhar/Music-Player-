@@ -16,13 +16,16 @@ body{
 
 
 .left{
-    width: 25vw;
-    height: 94vh;
+    width: 350px;
+    /* height: 94vh; */
     /* padding: 8px; */
 }
 
 .right{
-    width: 75vw;
+    width: 1200px;
+    max-height: 100vh;
+    overflow: scroll;
+    position: relative;
 }
 
 .home{
@@ -65,6 +68,9 @@ body{
 }
 
 .footer{
+    padding-left: 40px;
+    padding-bottom: 20px;
+    /* padding: 20px; */
     font-size: medium;
     color: grey;
     position: absolute;
@@ -78,6 +84,7 @@ body{
 }
 .header{
     background-color: #313131;
+    height: 70px;
 }
 
 .spotifyPlaylist{
@@ -87,9 +94,13 @@ body{
 .spotifyPlaylist .card{
     width: 200px;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #252525;
     margin: 20px 10px;
+}
+
+.card{
+    position: relative;
 }
 
 .card > *{
@@ -103,6 +114,67 @@ body{
 }
 
 .cardContainer{
+    display: flex; 
+    gap: 10px;   
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 65vh;
+}
+
+
+.signupbtn{
+    background-color: #313131;
+    color: grey;
+    font-weight: bold;
+    /* padding: 10px; */
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.signupbtn:hover{
+    font-size: 0.9rem;
+    color: white;
+}
+
+.btn *{
+    margin: 0 12px;
+}
+
+.loginbtn{
+    background-color: white;
+    color: grey;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 70px;
+    /* padding-left: 20px; */
+}
+
+.loginbtn:hover{
+    font-size: 0.9rem;
+    color: black;
+    width: 72px;
+}
+
+.songbuttons{
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+}
+
+.playbar{
+    position: absolute;
+    bottom: 0px;
+    background-color: greenyellow;
+    width: 100%;
+    padding: 15px;
+}
+
+.size{
+    width: 110px;
 }

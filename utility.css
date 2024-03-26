@@ -31,3 +31,47 @@
     font-size: 22px;
     padding: 10px;
 }
+
+.s-2{
+  width: 15px;
+}
+
+
+
+
+
+
+/* Track */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #444;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #333;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+  }
+  
+  /* Corner */
+  ::-webkit-scrollbar-corner {
+    background: #333;
+  }
